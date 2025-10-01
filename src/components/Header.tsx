@@ -110,7 +110,7 @@ export default function Header() {
                       className="w-8 h-8 rounded-full object-cover border-2 border-gray-200"
                     />
                     <span className="text-sm font-medium text-gray-900">
-                      {profile.display_name || ""}
+                      {profile.display_name}
                     </span>
                   </Link>
                 </div>
