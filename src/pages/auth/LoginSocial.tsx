@@ -10,14 +10,14 @@ export default function LoginSocial() {
   const handleGithubLogin = async () => {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
-        provider: 'github',
-        options:{
+        provider: "github",
+        options: {
           redirectTo: `${import.meta.env.VITE_URL}/profile-setup`,
         },
       });
-      if(error) throw error; 
-    } catch (error) {
-      console.log(error);
+      if (error) throw error;
+    } catch (e) {
+      console.error(e);
     }
   };
 
